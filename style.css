@@ -1,47 +1,122 @@
-.coolTitle {
-  align-items: center;
-  text-align: center;
-  font-family: 'Oswald', Helvetica, sans-serif;
-  font-size: 40px;
-  transform: skewY(-10deg);
-  letter-spacing: 4px;
-  word-spacing: -8px;
-  color: tomato;
-  text-shadow: 
-    -1px -1px 0 firebrick,
-    -2px -2px 0 firebrick,
-    -3px -3px 0 firebrick,
-    -4px -4px 0 firebrick,
-    -5px -5px 0 firebrick,
-    -6px -6px 0 firebrick,
-    -7px -7px 0 firebrick,
-    -8px -8px 0 firebrick,
-    -30px 20px 40px dimgrey;
-    background-color: seagreen;
-    width: 250px;
-  height: 100px;
-  display: inline-block;
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    color: white;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    color: black;
+    transform: none;
+  }
+}
+@keyframes rotate-up {
+  0%{
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes rotate-down {
+  0%{
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+body{
+  background: linear-gradient(to right, rgb(254, 1, 1), rgb(23, 0, 0));;
+}
+h1{
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: pop-in 2s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+}
+footer{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: rotate-up 1.8s cubic-bezier(0, 0.9, 0.3, 1.2);
+}
+h3{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: rotate-down 1.8s cubic-bezier(0, 0.9, 0.3, 1.2);
+
 }
 
-.done {
+.name{
+  font-style: italic;
+  color: yellow;
+}
+.done{
+  color:darkred;
   text-decoration: line-through;
 }
 .header{
+  margin-top: 70px;
   text-align: center;
+  justify-content: center;
 }
+.list{
+  border: black solid 5px;
+  border-radius: 10px;
+  padding: 30px 20px ;
+  margin-left: 500px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  background-color: #d5c455;
+}
+.input{
+  display: flex;
+  justify-content: center;
+}
+.input1{
+  border: black solid 2px;
+  border-radius: 10px 0px 0px 10px ;
+  padding: 10px;
+  background-color: #ffebd9;
+   
+}
+.input2{
+  border: black solid 2px;
+  border-radius: 0px 10px 10px 0px ;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 
-ul {
-  width: 15%;
-  margin: auto;
 }
-.toMakeItCenter{
-  width: 20%;
-  margin: auto;
+li{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color:black;
+  padding: 10px;
 }
-.padding{
-  position: relative;
-  left: 20px;  
+li:hover{
+  font-size:22px;
+  color: darkred;
+  border-bottom: 1px solid gray;
+  transition: ease-in-out 0.2s;
+  border-color: black;
 }
-body{
-  background-color: #eef5b2;
+.button1{
+  padding: 7px;
+  background-color: gray ;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  font: 15px;
+  cursor: pointer;
+  position: absolute;
+  left: 57%;
+}
+p{
+  font-size: 20px;
+  color: white;
+  margin-top: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }

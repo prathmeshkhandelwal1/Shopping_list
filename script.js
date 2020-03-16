@@ -12,14 +12,12 @@ function createListElement() {
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value = "";
-	li.className="list-group-item list-group-item-dark";
 	
 	var btn= document.createElement("button");
 	btn.appendChild(document.createTextNode("Delete!"));
 	li.appendChild(btn);
+	btn.classList.toggle("button1")
 	btn.onclick=removeParent;
-	btn.className="btn btn-dark padding";
-	
 }
 
 function addListAfterClick() {
@@ -42,20 +40,6 @@ ul.onclick=function(event){
 	var target = event.target;
 	target.classList.toggle("done");
 }
-function listLength(){
-	 return listItems.length;
-}
-// function deleteButton(){
-// 	var btn= document.createElement("button");
-// 	btn.appendChild(document.createTextNode("Delete!"));
-// 	listItems[i].appendChild(btn);
-// 	btn.onclick=removeParent;
-// }
-
-// for( i=0;i<listLength;i++)
-// {
-// 	deleteButton();
-// }
 function removeParent(evt){
 	evt.target.parentNode.remove();
 }
